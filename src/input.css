@@ -112,7 +112,7 @@ html{
 
 .ele {
     opacity: 0;
-    transform: translateX(15px);
+    transform: translateX(-15px);
     transition: opacity 1.3s, transform 1.6s;
   }
 .fade-side {
