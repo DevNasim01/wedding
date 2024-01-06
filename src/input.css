@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cour{
+    font-family: 'Courier Prime', monospace;
+}
+.franc{
+    font-family: 'Fraunces', serif;
+}
+.marrt{
+    font-family: 'Montserrat', sans-serif;
+}
+main p{
+    font-size: 1.4rem;
+    text-align: center;
+    opacity: 0.95;
+}
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 20px;
+}
+main{
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 140vh;
+}
+.vi{
+    position: absolute;
+    height: 100%;
+    transform: translateZ(-20px) scale(2);   
+}
+.wrapperi{
+    position: absolute;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    perspective: 20px;
+}
+.main{
+    position: relative;
+    transform-style: preserve-3d;
+    height: 100vh;
+    width: 100%;
+}
+.lm{
+    position: absolute;
+    width: 100%;
+    transform: translateZ(-20px) scale(2);
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+.wrapper::-webkit-scrollbar{
+    display: none;
+}
+html{
+    scrollbar-width: none;
+}
+.m15{
+    margin-top: 28rem;
+    height: 100vh;
+    background-color: #769250;
+    scroll-behavior: smooth;
+}
+.element {
+    opacity: 0;
+    transform: translateY(85px);
+    transition: opacity 1.3s, transform 1.6s;
+  }
+.fade-in {
+    opacity: 0.80 !important;
+    transform: translateY(0) !important;
+}
+.Srink {
+    transform: scale(0); /* Adjust the value as needed */
+    transition: transform 1.7s;
+  }
+
+.Srink-up {
+    transform: scale(1);
+}
+.Srink-up:hover {
+    transform: scale(1.2);
+}
+.element:hover{
+    transition: all 1.4s;
+}
+
+.scrolling-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -100%);
+    transition: transform 0.4s ease-out;
+    scroll-behavior: smooth;
+}
+.color-2{
+    background-color: #e19fad;
+}
+.box1,.box2,.box3,.box4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.ele {
+    opacity: 0;
+    transform: translateX(15px);
+    transition: opacity 1.3s, transform 1.6s;
+  }
+.fade-side {
+    opacity: 1;
+    transform: translateX(0px) !important;
+}
+#itwo{
+    transition-delay: 100ms;
+}
+#ithree{
+    transition-delay: 200ms;
+}
+#ifour{
+    transition-delay: 300ms;
+}
+.tone{
+    transition-delay: 500ms !important;
+}
+.ttwo{
+    transition-delay: 600ms !important;
+}
+.tthree{
+    transition-delay: 700ms !important;
+}
+.tfour{
+    transition-delay: 800ms !important;
+}
+#lone{
+    transition-delay: 1000ms !important;
+}
+#ltwo{
+    transition-delay: 1100ms !important;
+}
+#lthree{
+    transition-delay: 1.3s !important;
+}
+#lfour{
+    transition-delay: 1.4s !important;
+}
+
+
