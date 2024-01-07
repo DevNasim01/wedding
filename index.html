@@ -30,7 +30,7 @@
           I'm a paragraph. Click here to add your own text and edit me. <br> It's easy. Just click “Edit Text” or double click me to add your <br> own content and make changes to the font. 
         </p>
         <div class="flex justify-center element">
-          <button class="px-9 py-3 border-2 border-black hover:bg-slate-950 hover:text-white opacity-85 cour element">
+          <button class="px-9 py-3 border-2 border-black hover:bg-slate-950 hover:text-white cour btele">
             Learn More
           </button>
         </div>
@@ -45,7 +45,7 @@
         <p class="text-center franc text-3xl font-semibold element">Designed by nature, <br>
         made for you.</p>
         <div class="flex justify-center element pt-6">
-          <button class="px-9 py-3 border-2 border-black hover:bg-slate-950 hover:text-white transition-all duration-700 opacity-85 cour element">
+          <button class="px-9 py-3 border-2 border-black hover:bg-slate-950 hover:text-white transition-all duration-700 opacity-85 cour btele">
             Book a Meating
           </button>
         </div>
@@ -53,7 +53,7 @@
 
       <div>
           <div class="wrapper">
-            <img class="scrolling-image h-full w-full object-cover" src="c837a6_bd6b573dfcaa4ee99eabf7283c6de8ea~mv2.jpeg" alt="">
+            <img class="scrolling-image h-full w-full object-cover" src="c837a6_bd6b573dfcaa4ee99eabf7283c6de8ea~mv2.jpeg" alt="Loading...">
           </div>
       </div>
   </div>
@@ -107,17 +107,18 @@
   </div>
 
   <div class="w-full color-2 pt-32 pb-16 flex justify-center">
-    <button id="bt" class="px-9 py-3 border-2 border-black hover:bg-slate-950 hover:text-white transition-all duration-500 opacity-85 cour element">
+    <button class="px-9 py-3 border-2 border-black hover:bg-slate-950 hover:text-white transition-all cour btele">
       Discover More
     </button>
   </div>
 
-  <section class="w-full wrapperi">
-    <div class="main">
-      <img class="w-full object-cover lm" src="c837a6_ab4b87fc5323414bab25c6dd3bab48f7~mv2.jpg" alt="">
-    </div>
-  </section>
+  <div class="viewport">
+      <img src="c837a6_ab4b87fc5323414bab25c6dd3bab48f7~mv2.jpg" alt="Your Image" class="imge w-full h-dvh">
+  </div>
 
+  <div class="h-lvh w-full bg-slate-800">
+
+  </div>
 
 </html>
 <script>
@@ -137,6 +138,24 @@
 
     const elements = document.querySelectorAll('.element');
     elements.forEach(element => observer.observe(element));
+  });
+
+  // button transition ---
+
+  document.addEventListener('DOMContentLoaded', function() {
+    function fadeInOnScroll(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('bt-fade');
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(fadeInOnScroll, { threshold: 0.5 });
+
+    const btele = document.querySelectorAll('.btele');
+    btele.forEach(btele => observer.observe(btele));
   });
 
     // Scrink -----
@@ -187,6 +206,21 @@
     const ele = document.querySelectorAll('.ele');
     ele.forEach(ele => observer.observe(ele));
   });
+
+
+// scrolling main img ---
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollingContainer = document.querySelector('.imge');
+
+    scrollingContainer.addEventListener('scroll', function() {
+        const scrollPosition = scrollingContainer.scrollLeft;
+        const translateValue = scrollPosition * 0.5; // Adjust the speed as needed
+
+        scrollingContainer.style.backgroundPositionX = `${-translateValue}px`;
+    });
+});
+
 
 
 </script>

@@ -33,25 +33,6 @@ main{
     height: 100%;
     transform: translateZ(-20px) scale(2);   
 }
-.wrapperi{
-    position: absolute;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    perspective: 20px;
-}
-.main{
-    position: relative;
-    transform-style: preserve-3d;
-    height: 100vh;
-    width: 100%;
-}
-.lm{
-    position: absolute;
-    width: 100%;
-    transform: translateZ(-20px) scale(2);
-}
-
 body::-webkit-scrollbar{
     display: none;
 }
@@ -67,12 +48,12 @@ html{
     background-color: #769250;
     scroll-behavior: smooth;
 }
-.element {
+.element, .btele {
     opacity: 0;
     transform: translateY(85px);
     transition: opacity 1.3s, transform 1.6s;
   }
-.fade-in {
+.fade-in, .bt-fade {
     opacity: 0.80 !important;
     transform: translateY(0) !important;
 }
@@ -88,7 +69,7 @@ html{
     transform: scale(1.2);
 }
 .element:hover{
-    transition: all 1.4s;
+    transition: all 1.5s;
 }
 
 .scrolling-image {
@@ -152,5 +133,15 @@ html{
 #lfour{
     transition-delay: 1.4s !important;
 }
-
-
+.bt-fade:hover{
+    transition: all 0.65s;
+}
+.viewport{
+    overflow-x: auto;
+    width: 100%;
+    height: 100vh;
+    white-space: nowrap;
+}
+.imge{
+    display: inline-block;
+}

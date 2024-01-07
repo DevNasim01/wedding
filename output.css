@@ -568,8 +568,16 @@ video {
   height: 18rem;
 }
 
+.h-dvh {
+  height: 100dvh;
+}
+
 .h-full {
   height: 100%;
+}
+
+.h-lvh {
+  height: 100lvh;
 }
 
 .w-48 {
@@ -631,6 +639,11 @@ video {
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-0 {
@@ -758,14 +771,18 @@ video {
   opacity: 0.85;
 }
 
-.transition-all {
-  transition-property: all;
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .duration-700 {
@@ -810,27 +827,6 @@ main{
   transform: translateZ(-20px) scale(2);
 }
 
-.wrapperi{
-  position: absolute;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  perspective: 20px;
-}
-
-.main{
-  position: relative;
-  transform-style: preserve-3d;
-  height: 100vh;
-  width: 100%;
-}
-
-.lm{
-  position: absolute;
-  width: 100%;
-  transform: translateZ(-20px) scale(2);
-}
-
 body::-webkit-scrollbar{
   display: none;
 }
@@ -850,13 +846,13 @@ html{
   scroll-behavior: smooth;
 }
 
-.element {
+.element, .btele {
   opacity: 0;
   transform: translateY(85px);
   transition: opacity 1.3s, transform 1.6s;
 }
 
-.fade-in {
+.fade-in, .bt-fade {
   opacity: 0.80 !important;
   transform: translateY(0) !important;
 }
@@ -876,7 +872,7 @@ html{
 }
 
 .element:hover{
-  transition: all 1.4s;
+  transition: all 1.5s;
 }
 
 .scrolling-image {
@@ -955,6 +951,21 @@ html{
   transition-delay: 1.4s !important;
 }
 
+.bt-fade:hover{
+  transition: all 0.65s;
+}
+
+.viewport{
+  overflow-x: auto;
+  width: 100%;
+  height: 100vh;
+  white-space: nowrap;
+}
+
+.imge{
+  display: inline-block;
+}
+
 .hover\:bg-slate-950:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
@@ -964,5 +975,3 @@ html{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
-
