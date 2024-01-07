@@ -861,6 +861,7 @@ html{
   transform: scale(0);
   /* Adjust the value as needed */
   transition: transform 1.7s;
+  cursor: pointer;
 }
 
 .Srink-up {
@@ -964,6 +965,12 @@ html{
 
 .imge{
   display: inline-block;
+}
+
+.box img:hover{
+  transform: scale(1.07) !important;
+  transition: transform 0.5s;
+  cursor: pointer;
 }
 
 .hover\:bg-slate-950:hover {
