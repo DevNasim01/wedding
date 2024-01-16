@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "file": "C:\\Users\\sk nasim\\Desktop\\l\\index.html"
+            "file": "C:\\Users\\sk nasim\\Desktop\\l\\Learn More\\Learn_More.html"
         }
     ]
 }

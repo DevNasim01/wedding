@@ -15,8 +15,8 @@
       <img class="vi w-full" src="vh.jpg" alt="Loading...">
       <header class="header w-full flex justify-around pt-14 text-3xl">
         <div class="cour">Menu</div>
-        <div class="cour">Giardino 12</div>
-        <div class="cour">Book a Meeting</div>
+        <div class="franc">Giardino 12</div>
+        <div class="cour tracking-tighter">Book a Meeting</div>
       </header>
 
       <h1 class="text-center text-8xl mt-20 franc font-semibold tracking-widest leading-tight opacity-97 element">Weddings, Inspired <br> by Nature</h1>
@@ -30,8 +30,7 @@
           I'm a paragraph. Click here to add your own text and edit me. <br> It's easy. Just click “Edit Text” or double click me to add your <br> own content and make changes to the font. 
         </p>
         <div class="flex justify-center element">
-          <button class="px-9 py-3 border-2 border-black hover:bg-slate-950 hover:text-white cour btele">
-            Learn More
+          <button class="px-9 py-3 border-2 border-black hover:bg-slate-950 hover:text-white cour btele"><a href="Learn More\Learn_More.html">Learn More</a>
           </button>
         </div>
       </section>
@@ -122,103 +121,79 @@
 
 </html>
 <script>
+  
+document.addEventListener('DOMContentLoaded', function() {
+  // faid in ------
+  function fadeInOnScroll(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }
 
-      // faid in ------
-  document.addEventListener('DOMContentLoaded', function() {
-    function fadeInOnScroll(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }
-
-    const observer = new IntersectionObserver(fadeInOnScroll, { threshold: 0.5 });
-
-    const elements = document.querySelectorAll('.element');
-    elements.forEach(element => observer.observe(element));
-  });
+  const observer1 = new IntersectionObserver(fadeInOnScroll, { threshold: 0.5 });
+  const elements1 = document.querySelectorAll('.element');
+  elements1.forEach(element => observer1.observe(element));
 
   // button transition ---
-
-  document.addEventListener('DOMContentLoaded', function() {
-    function fadeInOnScroll(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('bt-fade');
-          observer.unobserve(entry.target);
-        }
-      });
-    }
-
-    const observer = new IntersectionObserver(fadeInOnScroll, { threshold: 0.5 });
-
-    const btele = document.querySelectorAll('.btele');
-    btele.forEach(btele => observer.observe(btele));
-  });
-
-    // Scrink -----
-
-    document.addEventListener('DOMContentLoaded', function() {
-    function fadeInOnScroll(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('Srink-up');
-          observer.unobserve(entry.target);
-        }
-      });
-    }
-
-    const observer = new IntersectionObserver(fadeInOnScroll, { threshold: 0.5 });
-
-    const SrinkElements = document.querySelectorAll('.Srink');
-    SrinkElements.forEach(Srink => observer.observe(Srink));
-  });
-
-    // img scroll ----
-
-    document.addEventListener('DOMContentLoaded', function() {
-    const scrollingImage = document.querySelector('.scrolling-image');
-
-    window.addEventListener('scroll', function() {
-      const scrollPosition = window.scrollY;
-      const translateValue = scrollPosition * 0.1; // Adjust the speed as needed
-
-      scrollingImage.style.transform = `translate(-50%, -50%) translateX(${translateValue}px)`;
+  function fadeInOnScroll2(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('bt-fade');
+        observer.unobserve(entry.target);
+      }
     });
+  }
+
+  const observer2 = new IntersectionObserver(fadeInOnScroll2, { threshold: 0.5 });
+  const btele = document.querySelectorAll('.btele');
+  btele.forEach(btele => observer2.observe(btele));
+
+  // Scrink -----
+  function fadeInOnScroll3(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('Srink-up');
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  const observer3 = new IntersectionObserver(fadeInOnScroll3, { threshold: 0.5 });
+  const SrinkElements = document.querySelectorAll('.Srink');
+  SrinkElements.forEach(Srink => observer3.observe(Srink));
+
+  // img scroll ----
+  const scrollingImage = document.querySelector('.scrolling-image');
+  window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const translateValue = scrollPosition * 0.1; // Adjust the speed as needed
+    scrollingImage.style.transform = `translate(-50%, -50%) translateX(${translateValue}px)`;
   });
 
   // side fade-in
-
-  document.addEventListener('DOMContentLoaded', function() {
-    function fadeInOnScroll(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-side');
-          observer.unobserve(entry.target);
-        }
-      });
-    }
-
-    const observer = new IntersectionObserver(fadeInOnScroll, { threshold: 0.5 });
-
-    const ele = document.querySelectorAll('.ele');
-    ele.forEach(ele => observer.observe(ele));
-  });
-
-
-// scrolling main img ---
-
-document.addEventListener('DOMContentLoaded', function() {
-    const scrollingContainer = document.querySelector('.imge');
-
-    scrollingContainer.addEventListener('scroll', function() {
-        const scrollPosition = scrollingContainer.scrollLeft;
-        const translateValue = scrollPosition * 0.5; // Adjust the speed as needed
-
-        scrollingContainer.style.backgroundPositionX = `${-translateValue}px`;
+  function fadeInOnScroll4(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-side');
+        observer.unobserve(entry.target);
+      }
     });
+  }
+
+  const observer4 = new IntersectionObserver(fadeInOnScroll4, { threshold: 0.5 });
+  const ele = document.querySelectorAll('.ele');
+  ele.forEach(ele => observer4.observe(ele));
+
+  // scrolling main img ---
+  const scrollingContainer = document.querySelector('.imge');
+  scrollingContainer.addEventListener('scroll', function() {
+    const scrollPosition = scrollingContainer.scrollLeft;
+    const translateValue = scrollPosition * 0.5; // Adjust the speed as needed
+    scrollingContainer.style.backgroundPositionX = `${-translateValue}px`;
+  });
 });
 
 

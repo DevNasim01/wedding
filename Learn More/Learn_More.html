@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fraunces:opsz,wght@9..144,200&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../output.css">
+    <title>Weading</title>
+</head>
+<body>
+    <div class="page-2-bg"><img class="w-full h-full bg-slate-700 object-cover" src="bg-1.jpg" alt="Loading.."></div>
+    <header class="header w-full flex justify-around pt-14 text-3xl col2">
+        <div class="cour text-xl font-light opacity-65">Menu</div>
+        <div class=" franc text-3xl font-semibold tracking-wider opacity-70">Giardino 12</div>
+        <div class="cour tracking-tighter text-xl font-light opacity-65">Book a Meeting</div>
+      </header>
+
+      <div class="col2 w-full pb-40">
+        <p class="w-full text-center cour pt-24 text-xl opacity-75">About</p>
+        <p class="w-full text-center franc text-6xl pt-4 opacity-75">We are GIARDINO 12.</p>  
+      </div>
+
+      <div class="grid grid-cols-2 w-full h-auto">
+        <div class="flex gap-5 flex-col justify-center items-center col2 pt-64 pb-24 ">
+            <div class="h-72 w-60"><img class="p2-img" src="pexels-emma-bauso-2253870.jpg" alt="Loading..."></div>
+            <p class="text-center franc tracking-widest text-lg">Hosting is in <br>
+            our nature</p>
+
+            <p class="text-center py-10 px-28 marrt leading-10 tracking-wider opacity-60 ">I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I'm a great place for you to tell a story and let your users know a little more about you.</p>
+
+            <p class="franc  tracking-wider text-xl">Our history</p>
+            <p class="text-center pt-6 px-28 marrt leading-10 tracking-wider opacity-60 ">I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I'm a great place for you to tell a story and let your users know a little more about you.</p>
+
+            <p class="text-center py-4 px-28 marrt leading-10 tracking-wider opacity-60">This is a great space to write a long text about your company and your services. You can use this space to go into a little more detail about your company.</p>
+        </div>
+            <div class="bg-non"></div>
+       </div>
+
+       <div class=" h-110 col3 pt-10 px-8 pb-20">
+            <p class="cour text-lg opacity-65 text-center" >Moments in GIARDINO</p>
+            <div class="h-full pt-4 w-full flex justify-center items-center"><i class="fa-solid fa-chevron-left text-4xl arrow left" onclick="changeImage(-1)" ></i></i><img id="card-image" class="L-img px-4" src="imge1.webp" alt="Loading.."><i class="fa-solid fa-chevron-right text-4xl arrow right"  onclick="changeImage(1)" ></i>
+            </div>
+        </div>
+
+</body>
+</html>
+<script>
+      let currentImageIndex = 1;
+    const totalImages = 6; // Set the total number of images
+
+    function changeImage(direction) {
+      currentImageIndex += direction;
+
+      if (currentImageIndex < 1) {
+        currentImageIndex = totalImages;
+      } else if (currentImageIndex > totalImages) {
+        currentImageIndex = 1;
+      }
+
+      const imagePath = `imge${currentImageIndex}.webp`;
+      document.getElementById('card-image').src = imagePath;
+    }
+
+
+</script>
