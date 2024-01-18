@@ -47,7 +47,22 @@
 
 </body>
 </html>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script> 
 <script>
+
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
       let currentImageIndex = 1;
     const totalImages = 6; // Set the total number of images
 
@@ -63,6 +78,5 @@
       const imagePath = `imge${currentImageIndex}.webp`;
       document.getElementById('card-image').src = imagePath;
     }
-
 
 </script>
