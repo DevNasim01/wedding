@@ -9,8 +9,8 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            // "file": "C:\\Users\\sk nasim\\Desktop\\Weeding\\Learn More\\Learn_More.html"
-            "file": "${workspaceFolder}/index.html"
+            "file": "C:\\Users\\sk nasim\\Desktop\\Weeding\\Learn More\\Learn_More.html"
+            // "file": "${workspaceFolder}/index.html"
         }
     ]
 }

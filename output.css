@@ -812,6 +812,10 @@ video {
   line-height: 1.75rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -822,10 +826,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .leading-10 {
@@ -856,6 +856,10 @@ video {
   letter-spacing: 0.1em;
 }
 
+.opacity-60 {
+  opacity: 0.6;
+}
+
 .opacity-65 {
   opacity: 0.65;
 }
@@ -870,10 +874,6 @@ video {
 
 .opacity-85 {
   opacity: 0.85;
-}
-
-.opacity-60 {
-  opacity: 0.6;
 }
 
 .transition {
@@ -1124,6 +1124,26 @@ html{
 .p2-img:hover{
   transform: scale(1.15) !important;
   cursor: pointer;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 .hover\:bg-slate-950:hover {
